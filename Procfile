@@ -1,1 +1,1 @@
-web: gunicorn django-project.wsgi 
+web: gunicorn news_portal.wsgi 
