@@ -16,13 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.urls import re_path as url
-from rest_framework_swagger.views import get_swagger_view
+# from rest_framework_swagger.views import get_swagger_view
 
-schema_view = get_swagger_view(title='News API')
+# schema_view = get_swagger_view(title='News API')
 
 
 urlpatterns = [
-    url(r'^$', schema_view),
+    # url(r'^$', schema_view),
     path('admin/', admin.site.urls),
     path('auth/', include('auth_jwt_app.urls')),
     path('', include('news.urls')),
