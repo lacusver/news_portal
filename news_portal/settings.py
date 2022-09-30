@@ -14,6 +14,7 @@ from pathlib import Path
 from datetime import timedelta
 import environ
 import os
+import django_heroku
 
 env = environ.Env()
 environ.Env.read_env()
@@ -181,3 +182,4 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
 
+django_heroku.settings(locals())
